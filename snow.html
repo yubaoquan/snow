@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        .f-tac {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="f-tac">Snow</h1>
+    <div class="f-tac f-bold">
+        <b>It is snowing. Do you feel cold?</b>
+    </div>
+    <div class="f-tac">
+        <p>Every morning you greet me </p>
+        <p>Small and white </p>
+        <p>Clean and bright </p>
+        <p>You look happy to meet me </p>
+        <p>Blossom of snow </p>
+        <p>May you bloom and grow </p>
+        <p>Bloom and grow forever </p>
+        <p>Edelweiss, edelweiss </p>
+        <p>Bless my homeland forever </p>
+        <p>Small and white </p>
+        <p>Clean and bright </p>
+        <p>You look happy to meet me </p>
+        <p>Blossom of snow </p>
+        <p>May you bloom and grow </p>
+        <p>Bloom and grow forever </p>
+        <p>Edelweiss, edelweiss </p>
+        <p>Bless my homeland forever</p>
+    </div>
+    <div class="">
+        <button type="button" name="button" id="play">play</button>
+        <button type="button" name="button" id="pause">pause</button>
+        <button type="button" name="button" id="clear">clear</button>
+        <button type="button" name="button" id="shape">change snow shape</button>
+    </div>
+    <script src="./snow.js"></script>
+    <script type="text/javascript">
+        document.getElementById('play').addEventListener('click', Snow.play);
+        document.getElementById('pause').addEventListener('click', Snow.pause);
+        document.getElementById('clear').addEventListener('click', Snow.clear);
+        document.getElementById('shape').addEventListener('click', function() {
+            var chars = [];
+            for (var i = 0; i < 26; i ++) {
+                chars.push(String.fromCharCode(97 + i));
+            }
+            Snow.setSnowShapes(chars);
+        });
+    </script>
+</body>
+</html>
